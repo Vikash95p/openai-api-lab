@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI API Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <h1>OpenAI API Lab</h1>
+            <p>A simple Python + FastAPI + OpenAI demo</p>
+        </div>
+        
+        <div class="chat-box" id="chatBox">
+            <div class="message system-message">
+                Welcome to OpenAI API Lab! Send a message to start chatting.
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Enter your message..." autocomplete="off">
+            <button id="sendButton">Send</button>
+            <button id="clearButton" class="secondary-btn">Clear</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

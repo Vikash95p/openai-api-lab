@@ -1,0 +1,167 @@
+/* General styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #202123;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.system-message {
+    align-self: center;
+    background-color: #e5e5e5;
+    color: #555;
+    font-size: 14px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.ai-message {
+    align-self: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    color: #333;
+    border-bottom-left-radius: 0;
+}
+
+.error-message {
+    align-self: center;
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+    font-size: 14px;
+}
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.secondary-btn {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.secondary-btn:hover {
+    background-color: #bdbdbd;
+}
+
+/* Loading animation */
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    align-self: flex-start;
+    width: fit-content;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #888;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
